@@ -1,0 +1,35 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t armansiyami/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run armansiyami/react-test npm test -- --coverage
+
+after_success:
+  - docker build -t armansiyami/multi-client ./client
+  - docker build -t armansiyami/multi-server ./server
+  - docker build -t armansiyami/multi-nginx ./nginx
+  - docker build -t armansiyami/multi-worker ./worker
+  # Log in to docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take image and push to docker hub
+  - docker push armansiyami/multi-client
+  - docker push armansiyami/multi-server
+  - docker push armansiyami/multi-nginx
+  - docker push armansiyami/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: docker
+  env: Multi-Docker-env
+  bucket_name: elasticbeanstalk-us-east-2-616335513978
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+    secret_access_key:
+      secure: "$AWS_SECRET_KEY"
