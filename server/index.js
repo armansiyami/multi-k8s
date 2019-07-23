@@ -32,6 +32,7 @@ const redisClient = redis.createClient({
   retry_strategy: () => 1000
 });
 const redisPublisher = redisClient.duplicate();
+
 // Express route handlers
 
 app.get('/', (req, res) => {
@@ -66,8 +67,4 @@ app.post('/values', async (req, res) => {
 
 app.listen(5000, err => {
   console.log('Listening');
-});
-
-redisClient.on('connect', function() {
-  console.log('server connected');
 });
