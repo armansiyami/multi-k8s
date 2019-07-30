@@ -35,7 +35,7 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    return true;
+    return this.state.seenIndexes.map(({ number }) => number).join(', ');
   }
 
   renderValues() {
@@ -43,9 +43,9 @@ class Fib extends Component {
 
     for (let key in this.state.values) {
       entries.push(
-        <div key={key}>
-          For index {key} I calculated {this.state.values[key]}
-        </div>
+          <div key={key}>
+            For index {key} I calculated {this.state.values[key]}
+          </div>
       );
     }
 
@@ -54,22 +54,22 @@ class Fib extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>Enter your index:</label>
-          <input
-            value={this.state.index}
-            onChange={event => this.setState({ index: event.target.value })}
-          />
-          <button>Submit</button>
-        </form>
+        <div>
+          <form onSubmit={this.handleSubmit}>
+            <label>Enter your index:</label>
+            <input
+                value={this.state.index}
+                onChange={event => this.setState({ index: event.target.value })}
+            />
+            <button>Submit</button>
+          </form>
 
-        <h3>Indexes I have seen:</h3>
-        {this.renderSeenIndexes()}
+          <h3>Indexes I have seen:</h3>
+          {this.renderSeenIndexes()}
 
-        <h3>Calculated Values:</h3>
-        {this.renderValues()}
-      </div>
+          <h3>Calculated Values:</h3>
+          {this.renderValues()}
+        </div>
     );
   }
 }

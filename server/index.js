@@ -21,8 +21,8 @@ const pgClient = new Pool({
 pgClient.on('error', () => console.log('Lost PG connection'));
 
 pgClient
-  .query('CREATE TABLE IF NOT EXISTS values (number INT)')
-  .catch(err => console.log(err));
+    .query('CREATE TABLE IF NOT EXISTS values (number INT)')
+    .catch(err => console.log(err));
 
 // Redis Client Setup
 const redis = require('redis');
@@ -40,9 +40,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/values/all', async (req, res) => {
-  const values = await pgClient.query('SELECT * from values');
+  // const values = await pgClient.query('SELECT * from values');
 
-  res.send(values.rows);
+  res.send([1, 2, 3]);
 });
 
 app.get('/values/current', async (req, res) => {
