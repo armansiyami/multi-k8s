@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Build images and tag them with respective pwd
 docker build -t armansiyami/multi-client:latest -t armansiyami/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t armansiyami/multi-server:latest -t armansiyami/multi-server:$SHA -f ./server/Dockerfile ./server
