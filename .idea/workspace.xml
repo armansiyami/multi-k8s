@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="329ef8e5-422e-4baa-95eb-696887c71acc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/bashsupport_project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/certificate.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/certificate.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/ingress-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/ingress-service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/issuer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/issuer.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/k8s/issuer.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="105">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -126,9 +121,9 @@
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/deploy.sh" />
-        <option value="$PROJECT_DIR$/k8s/issuer.yaml" />
         <option value="$PROJECT_DIR$/k8s/ingress-service.yaml" />
         <option value="$PROJECT_DIR$/k8s/certificate.yaml" />
+        <option value="$PROJECT_DIR$/k8s/issuer.yaml" />
       </list>
     </option>
   </component>
@@ -197,12 +192,12 @@
       <workItem from="1563837170381" duration="59000" />
       <workItem from="1563901268024" duration="11575000" />
       <workItem from="1564416695774" duration="6638000" />
-      <workItem from="1564503222332" duration="2856000" />
+      <workItem from="1564503222332" duration="2953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38943000" />
+    <option name="totallyTimeSpent" value="39040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1911" height="594" extended-state="0" />
@@ -517,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/k8s/issuer.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
         </state>
       </provider>
     </entry>
